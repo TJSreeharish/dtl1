@@ -343,7 +343,7 @@ app.delete('/patients/:id', async (req, res) => {
 });
 
 app.post('/appointments', async (req, res) => {
-  const { patientName, patientemail,appointmentDate, appointmentTime, age, gender, contactNumber,doctorName,doctorEmail } = req.body;
+  const { patientName, patientemail,appointmentDate, appointmentTime, age, gender, contactNumber,doctorName,doctorEmail,timings } = req.body;
   try {
     const encryptedAppointment = {
       patientName:(patientName),
@@ -354,9 +354,11 @@ app.post('/appointments', async (req, res) => {
       gender: (gender),
       contactNumber: (contactNumber),
       doctorName: doctorName,
-      doctorEmail: doctorEmail
+      doctorEmail: doctorEmail,
+      timings: timings,
     };
-
+    console.log(timings);
+    
     const appointment = new AppointmentModel(encryptedAppointment);
     const newAppointment = await appointment.save();
     res.status(201).json(newAppointment);
@@ -380,7 +382,8 @@ app.get('/appointments', async (req, res) => {
       contactNumber: (appointment.contactNumber),
       status: appointment.status,
       doctorEmail: appointment.doctorEmail,
-      doctorName: appointment.doctorName
+      doctorName: appointment.doctorName,
+      timing: appointment.timings,
     }));
     res.json(decryptedAppointments);
   } catch (err) {

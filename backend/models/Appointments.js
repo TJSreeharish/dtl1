@@ -41,6 +41,10 @@ const appointmentSchema = new mongoose.Schema({
   doctorEmail: {
     type: String,
     required: true,
+  },
+  timings:{
+    type: String,
+    required: false
   }
 });
 

@@ -15,6 +15,7 @@ const AppointmentBooking = () => {
     age: '',
     gender: '',
     contactNumber: '',
+    timings: '',
   });
 
   const [appointments, setAppointments] = useState([]);
@@ -82,6 +83,8 @@ const AppointmentBooking = () => {
   const handleAppointmentBooking = async (e) => {
     e.preventDefault();
     const newAppointment = { ...formData, patientemail, doctorName, doctorEmail };
+    console.log(newAppointment);
+    
     try {
       await axios.post(`${backend_url}/appointments`, newAppointment, {
         headers: { 'Content-Type': 'application/json' },
@@ -118,6 +121,7 @@ const AppointmentBooking = () => {
         age: '',
         gender: '',
         contactNumber: '',
+        timings:'',
       });
       localStorage.removeItem('doctorEmail');
       localStorage.removeItem('doctorName');
@@ -259,20 +263,66 @@ const AppointmentBooking = () => {
             </div>
           </>) : (
             <div className="form-container">
-              <form onSubmit={handleAppointmentBooking}>
-                <div className="form-row">
-                  <input type="text" name="patientName" value={formData.patientName} onChange={handleInputChange} placeholder="Patient Name" />
-                  <input type="text" name="appointmentDate" value={formData.appointmentDate} onChange={handleInputChange} placeholder="Appointment Date" readOnly />
-                  <input type="text" name="appointmentTime" value={formData.appointmentTime} onChange={handleInputChange} placeholder="Appointment Time" readOnly />
-                  <input type="text" name="age" value={formData.age} onChange={handleInputChange} placeholder="Age" />
-                  <input type="text" name="gender" value={formData.gender} onChange={handleInputChange} placeholder="Gender" />
-                  <input type="text" name="contactNumber" value={formData.contactNumber} onChange={handleInputChange} placeholder="Contact Number" />
-                  <button type="submit" className="btn-submit">
-                    Book Appointment
-                  </button>
-                </div>
-              </form>
-            </div>
+            <form onSubmit={handleAppointmentBooking}>
+              <div className="form-row">
+                <input
+                  type="text"
+                  name="patientName"
+                  value={formData.patientName}
+                  onChange={handleInputChange}
+                  placeholder="Patient Name"
+                />
+                <input
+                  type="text"
+                  name="appointmentDate"
+                  value={formData.appointmentDate}
+                  onChange={handleInputChange}
+                  placeholder="Appointment Date"
+                  readOnly
+                />
+                  <select
+  name="timings" // Update 'timing' in formData
+  value={formData.timings} // Use the correct property (timing)
+  onChange={(e) => {
+    handleInputChange(e); // Call the same handler to update the state
+  }}
+>
+                    <option value="" disabled>
+                      Select Appointment Time
+                    </option>
+                    <option value="5-6">5-6</option>
+                    <option value="6-7">6-7</option>
+                    <option value="7-8">7-8</option>
+                    <option value="8-9">8-9</option>
+                  </select>
+                  <input
+                    type="text"
+                    name="age"
+                    value={formData.age}
+                    onChange={handleInputChange}
+                    placeholder="Age"
+                  />
+                <input
+                  type="text"
+                  name="gender"
+                  value={formData.gender}
+                  onChange={handleInputChange}
+                  placeholder="Gender"
+                />
+                <input
+                  type="text"
+                  name="contactNumber"
+                  value={formData.contactNumber}
+                  onChange={handleInputChange}
+                  placeholder="Contact Number"
+                />
+                <button type="submit" className="btn-submit">
+                  Book Appointment
+                </button>
+              </div>
+            </form>
+          </div>
+          
           )}
         </>
       )}
@@ -290,6 +340,7 @@ const AppointmentBooking = () => {
                 <th>Gender</th>
                 <th>Contact Number</th>
                 <th>Current Status</th>
+                <th>timings</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -303,6 +354,7 @@ const AppointmentBooking = () => {
                   <td>{appointment.gender}</td>
                   <td>{appointment.contactNumber}</td>
                   <td>{appointment.status}</td>
+                  <td>{appointment.timing}</td>
                   <td>
                     {appointment.status === 'scheduled' && (
                       <>

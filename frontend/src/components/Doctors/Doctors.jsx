@@ -278,7 +278,7 @@ const DoctorsPage = () => {
               <th onClick={() => handleSort('specialization')}>Department</th>
               <th onClick={() => handleSort('location')}>Location</th>
               <th onClick={() => handleSort('contact')}>Contact</th>
-              {!canEditDelete && <th>Appointments</th>}
+              {!canEditDelete && <th>Timings</th>}
               {canEditDelete && <th>Actions</th>}
             </tr>
           </thead>
