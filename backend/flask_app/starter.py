@@ -2,9 +2,9 @@ import subprocess
 
 # Define the directories and commands
 commands = [
-    {"path": r"C:\Users\tjsre\Desktop\projects\sem3el\mainel\CliniNSync\backend", "command": "npm i && npm start"},
-    {"path": r"C:\Users\tjsre\Desktop\projects\sem3el\mainel\CliniNSync\frontend", "command": "npm i && npm run dev"},
-    {"path": r"C:\Users\tjsre\Desktop\projects\sem3el\mainel\CliniNSync\backend\flask_app", "command": "conda activate maximus && python app.py"}
+    {"path": r"C:\Users\tjsre\Desktop\dtl3\backend", "command": "npm i && npm start"},
+    {"path": r"C:\Users\tjsre\Desktop\dtl3\frontend", "command": "npm i && npm run dev"},
+    {"path": r"C:\Users\tjsre\Desktop\dtl3\backend\flask_app", "command": " python app.py"}
 ]
 
 # Function to run commands in a terminal
