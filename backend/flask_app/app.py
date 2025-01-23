@@ -12,7 +12,7 @@ from insurance_data import insurance_data
 import os
 
 app = Flask(__name__, static_folder='static')
-client = MongoClient('mongodb+srv://tjsreeharish:sreeharish@cluster0.yrg9a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',port=3001)
+client = MongoClient('mongodb://localhost:27017/',port=3001)
 db = client["test"]
 collection = db["patients"]
 
