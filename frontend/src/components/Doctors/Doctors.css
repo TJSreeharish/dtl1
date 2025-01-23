@@ -1,0 +1,212 @@
+/* General container styles */
+/* .page-background {
+  background: linear-gradient(135deg, #faf2e4, #f7e6c5);
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  padding: 20px;
+} */
+
+/* Dashboard button styles */
+.dashboard-button { 
+  position: absolute;
+  top: 10px; /* Adjusted to place it at the top-left corner */
+  left: 10px; /* Adjusted to place it closer to the left edge */
+  /* background-color: #2575fc; */
+  color: #fff;
+  border: none;
+  border-radius: 5px; /* Rectangular shape with slight rounding */
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s, box-shadow 0.3s;
+  text-align: center;
+  display: inline-block;
+}
+
+.dashboard-button:hover {
+  transform: scale(1.1);
+  /* box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); */
+}
+
+/* Page header styles */
+.page-header {
+  padding-top: 1.5%;
+  font-size: 48px;
+  text-align: center;
+  margin: 60px 0;
+  color: #2575fc;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+/* Form button styles */
+.form-toggle-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Form container styles */
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.form-box {
+  width: 60%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Form heading styles */
+.form-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Form input styles */
+.form-input {
+  margin-bottom: 15px;
+}
+
+.form-input label {
+  margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+  color: #666;
+}
+
+.form-input input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.form-input input:focus {
+  border-color: #2575fc;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(37, 117, 252, 0.5);
+}
+
+/* Search bar styles */
+.search-bar {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  padding: 12px;
+  width: 50%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  max-width: 400px;
+  transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+  border-color: #2575fc;
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(37, 117, 252, 0.5);
+}
+
+/* Table container styles */
+/* .table-container {
+  height: 60vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+} */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.table th, .table td {
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.table th {
+  background: #2575fc;
+  color: #fff;
+  cursor: pointer;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tr:nth-child(odd) {
+  background-color: #fdfdfd;
+}
+
+.table tr:hover {
+  background-color: #e9f3ff;
+  transition: background-color 0.3s;
+}
+
+/* Button styles for actions */
+.btn-info, .btn-danger {
+  margin-right: 10px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  border: none;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+.btn-info:hover, .btn-danger:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-sm {
+  padding: 6px 10px;
+}
+
+/* Book Appointment button */
+.book-appoint-button {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  border: none;
+  border-radius: 25px !important;
+  padding: 15px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.book-appoint-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 20px rgba(37, 117, 252, 0.3);
+}

@@ -1,0 +1,4 @@
+node_modules
+.env
+flask_session/
+*.pdf

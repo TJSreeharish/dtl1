@@ -1,0 +1,10 @@
+Flask
+Flask-Session
+Flask-Cors
+pymongo
+bson
+gridfs
+pillow
+pytesseract
+pdf2image
+

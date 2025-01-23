@@ -1,0 +1,105 @@
+/* Background video styling */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Login Background */
+.login-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #faf2e4; */
+}
+
+/* Login Container */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+/* Title */
+.login-title {
+    color: #333;
+    font-size: 31px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.form-label{
+    color: #333 !important;
+    text-align: left;
+}
+/* Inputs and Dropdowns */
+.form-control,
+.form-select {
+    border-radius: 25px !important;
+    padding: 12px 15px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+input, select {
+    width: 100%;
+    padding: 5px; /* Made input fields smaller */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.85rem;
+}
+.form-control:focus,
+.form-select:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+    outline: none;
+}
+
+/* Buttons */
+.btn-primary {
+    background: #2575fc;
+    border-radius: 25px;
+    padding: 15px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background: #6a11cb;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: none;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background: #2575fc;
+    color: #fff;
+}
+
+/* Spinner */
+.spinner-border {
+    color: #2575fc;
+}

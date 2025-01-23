@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CliniNSync Medical Record</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome, {{ user }}!</h1>
+    <p>You are successfully logged in via Flask.</p>
+    <p>This is where your medical records will be displayed.</p>
+    
+    <!-- Existing content can go here -->
+
+    <!-- Button to Redirect to Patient Dashboard -->
+    <button class="button" onclick="redirectToReactDashboard()">Go to Patient Dashboard</button>
+
+    <script>
+        function redirectToReactDashboard() {
+            window.location.href = 'http://localhost:5173/patdash';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* Full Container Styling */
+.appointment-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #1f4037, #99f2c8); /* Fallback for browsers without video support */
+  }
+  
+  /* Background Video */
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(60%);
+  }
+  
+  /* Content Overlay */
+  .appointment-content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.75); 
+    padding: 25px;
+    border-radius: 12px;
+    width: 85%;
+    max-width: 500px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .appointment-content:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 18px 40px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Buttons */
+  button {
+    display: inline-block;
+    padding: 10px 18px;
+    font-size: 1rem; /* Smaller font size */
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
+    margin: 10px; /* Added margin to prevent overflow */
+  }
+  
+  /* Dashboard Button */
+ /* Dashboard Button */
+button.dashboard {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    text-transform: uppercase;
+    width: 10%; /* Make sure button doesn’t overflow horizontally */
+    margin-top: 150px; /* Adds space above the button to move it down */
+    
+  }
+  
+  button.dashboard:hover {
+    background: linear-gradient(to right, #0056b3, #007bff);
+    transform: scale(1.05); /* Slight scale for hover */
+  }
+  
+  
+  /* Edit Button */
+  button.edit-button {
+    background: yellow !important;
+    color: black;
+  }
+  
+  button.edit-button:hover {
+    background: #ffeb3b !important;
+    box-shadow: 0px 4px 10px rgba(255, 235, 59, 0.6);
+    transform: scale(1.05); /* Slight scale for hover */
+  }
+  
+  /* Delete Button */
+  button.delete-button {
+    background: red;
+    color: white;
+  }
+  
+  button.delete-button:hover {
+    background: darkred;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.6);
+    transform: scale(1.05); /* Slight scale for hover */
+  }
+  
+  /* Save Button */
+  button.save-button {
+    background: green;
+    color: white;
+  }
+  
+  button.save-button:hover {
+    background: darkgreen;
+    box-shadow: 0px 4px 10px rgba(0, 128, 0, 0.6);
+    transform: scale(1.05); /* Slight scale for hover */
+  }
+  
+  /* Submit Button */
+  button.btn-submit {
+    width: 100%;
+    background: linear-gradient(to right, #4caf50, #087f23);
+    font-size: 1.1rem; /* Slightly smaller */
+    margin-top: 8px;
+  }
+  
+  button.btn-submit:hover {
+    background: linear-gradient(to right, #087f23, #4caf50);
+    box-shadow: 0px 5px 15px rgba(72, 239, 128, 0.6);
+    transform: scale(1.05); /* Slight scale for hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .appointment-content {
+      width: 95%;
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 1.8rem; /* Smaller for smaller screens */
+    }
+  
+    button {
+      font-size: 0.9rem; /* Slightly smaller font size */
+      width: 100%; /* Ensure the button fits on smaller screens */
+    }
+  }
+  

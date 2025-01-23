@@ -1,0 +1,79 @@
+/* General styles for the dashboard */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: auto; /* Allow scrolling */
+}
+
+/* Dashboard content styling */
+.dashboard-content {
+    position: absolute; /* Change to absolute for flexibility */
+    text-align: center;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.dashboard-content h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 10px rgba(7, 89, 184, 0.8);
+    margin-bottom: 2rem;
+}
+
+/* Button container styling */
+.button-container {
+    display: flex;
+    justify-content: center; /* Align buttons horizontally */
+    gap: 30px; /* Spacing between buttons */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    margin-top: 20px;
+}
+
+.button {
+    text-decoration: none;
+    background-color: #1568e4;
+    color: white;
+    padding: 15px 30px; /* Adjust padding */
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(128, 0, 255, 0.8);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(128, 0, 255, 1);
+}
+
+/* Logout button styling */
+.logout-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    padding: 15px 30px; /* Adjust padding for consistency */
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 20px; /* Spacing above logout button */
+}
+
+.logout-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 1);
+}
+
+/* Footer styling */
+footer {
+    position: fixed;
+    bottom: 0; /* Fixed at the bottom */
+    width: 100%;
+    text-align: center;
+    color: yellow;
+    font-size: 1rem; /* Slightly larger font size */
+}
